@@ -1,3 +1,18 @@
+
+function playRound(playerSelection, computerSelection) {
+  let status = "You Lose!";
+  let winner = computerSelection;
+  let looser = playerSelection;
+  let playerWin = (playerSelection == "rock" && computerSelection == "scissors") || (playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper");
+
+  if (playerWin) {
+    [winner, looser] = [playerSelection, computerSelection]
+    status = "You Win!";
+  }
+
+  return `${status} ${winner} beats ${looser}`;
+}
+
 function getComputerChoice() {
   let numAzar = Math.floor(Math.random() * 3);
   switch (numAzar) {
