@@ -1,4 +1,11 @@
 
+
+
+function getUserChoice() {
+  let choice = prompt("Ingresa tu eleccion (Rock / Paper / Scissors)").toLowerCase();
+  return choice;
+}
+
 function playRound(playerSelection, computerSelection) {
   let status = "You Lose!";
   let winner = computerSelection;
