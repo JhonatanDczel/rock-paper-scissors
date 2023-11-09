@@ -1,5 +1,17 @@
+let userWins = 0;
+let computerWins = 0;
 
+for (let i = 0; i < 5; i++) {
+  game();
+  console.log(`\nUser wins: ${userWins}\nComputer wins: ${computerWins}\n\n`);
+}
 
+function game() {
+  let user = getUserChoice();
+  let computer = getComputerChoice();
+  let round = playRound(user, computer);
+  console.log(round);
+}
 
 function getUserChoice() {
   let choice = prompt("Ingresa tu eleccion (Rock / Paper / Scissors)").toLowerCase();
@@ -11,11 +23,15 @@ function playRound(playerSelection, computerSelection) {
   let winner = computerSelection;
   let looser = playerSelection;
   let playerWin = (playerSelection == "rock" && computerSelection == "scissors") || (playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper");
+  let tie = (playerSelection == computerSelection);
 
   if (playerWin) {
     [winner, looser] = [playerSelection, computerSelection]
     status = "You Win!";
-  }
+    userWins++;
+  } else if (tie) {
+    return "It's a tie :/";
+  } else computerWins++;
 
   return `${status} ${winner} beats ${looser}`;
 }
