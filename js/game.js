@@ -1,10 +1,12 @@
 let userWins = 0;
 let computerWins = 0;
 
-for (let i = 0; i < 5; i++) {
-  game();
-  console.log(`\nUser wins: ${userWins}\nComputer wins: ${computerWins}\n\n`);
-}
+const selection = document.querySelector('#selection');
+
+selection.addEventListener('click', (e) => {
+  const select = e.target;
+  console.log(playRound(select.id, getComputerChoice()));
+});
 
 function game() {
   let user = getUserChoice();
