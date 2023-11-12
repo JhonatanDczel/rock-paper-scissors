@@ -90,7 +90,6 @@ body {
 }
 
 #selection {
-  border: 1px solid red;
   justify-content: center;
   display: flex;
   gap: 64px;
@@ -134,7 +133,7 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .header {
     padding: 16px;
     font-size: 40px;
@@ -142,13 +141,22 @@ a {
   }
   .content {
     padding: 20px;
-    gap: 10vh;
+    gap: 32px;
   }
   #user > .item , #computer > .item{
-    font-size: 70px;
+    font-size: 80px;
   }
   #selection > button {
     font-size: 80px;
+  }
+  .status > #who-wins {
+    font-size: 32px;;
+  }
+  .status > #info {
+    font-size: 16px;
+  }
+  .card > .wins {
+    font-size: 16px;
   }
 }
 
