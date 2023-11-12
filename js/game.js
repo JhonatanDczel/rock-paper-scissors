@@ -17,6 +17,11 @@ gSelection.addEventListener('click', (e) => {
   gUserSelect.textContent = select.textContent;
 });
 
+
+function isGameOver() {
+  return userWins == 5 || computerWins == 5;
+}
+
 function getUserChoice() {
   let choice = prompt("Ingresa tu eleccion (Rock / Paper / Scissors)").toLowerCase();
   return choice;
