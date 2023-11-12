@@ -5,12 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="./js/game.js" defer></script>
+    <link rel="stylesheet" href="./styles/style.css">
   </head>
   <body>
-    <div id="selection">
-      <button id='rock'>Rock</button>
-      <button id='paper'>Paper</button>
-      <button id='scissors'>Scissors</button>
+    <div class='header'>
+      <p>ROCK PAPPER SCISSORS</p>
+    </div>
+    <div class="content">
+      <div class="status">
+        <p id='who-wins'>Selecciona uno para empezar</p>
+        <p id='info'>El mejor de 5 rondas gana</p>
+      </div>
+      <div class="battle">
+        <div class="card" id='user'>
+          <p class='item'>?</p>
+          <p class='wins'>Usuario: 0</p>
+        </div>
+        <div class="card" id='computer'>
+          <p class='item'>?</p>
+          <p class='wins'>Computadora: 0</p>
+        </div>
+      </div>
+      <div id="selection">
+        <button id='rock'>✊</button>
+        <button id='paper'>✋</button>
+        <button id='scissors'>✌</button>
+      </div>
+    </div>
+    <div class="footer">
+      <a href='https://github.com/JhonatanDczel' target='_blank'><p class="autor">Copyright © 2023 - Dczel Dev <span class="icon">&lt;/&gt;</span></p></a>
     </div>
   </body>
 </html>
