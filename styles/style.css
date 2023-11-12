@@ -122,6 +122,7 @@ button:hover {
   position: absolute;
   bottom: 0;
   left: 0;
+  text-align: center;
 }
 
 .icon {
@@ -132,3 +133,22 @@ button:hover {
 a {
   text-decoration: none;
 }
+
+@media (max-width: 650px) {
+  .header {
+    padding: 16px;
+    font-size: 40px;
+    line-height: 1.5;
+  }
+  .content {
+    padding: 20px;
+    gap: 10vh;
+  }
+  #user > .item , #computer > .item{
+    font-size: 70px;
+  }
+  #selection > button {
+    font-size: 80px;
+  }
+}
+
