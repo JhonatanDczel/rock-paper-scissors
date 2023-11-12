@@ -57,8 +57,6 @@ function getComputerChoice() {
       return "paper";
     case 2:
       return "scissors";
-    default:
-      "something is not run";
   }
 }
 
