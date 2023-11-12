@@ -39,6 +39,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 64px;
+  padding: 64px;
 }
 
 .status {
@@ -47,6 +49,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  text-align: center;
 }
 
 .status > #who-wins {
@@ -61,10 +64,15 @@ body {
 
 .battle {
   display: flex;
-  gap: 350px;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1000px;
 }
 
 .card {
+  width: 140px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,6 +90,8 @@ body {
 }
 
 #selection {
+  border: 1px solid red;
+  justify-content: center;
   display: flex;
   gap: 64px;
   height: 140px;
