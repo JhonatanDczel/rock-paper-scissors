@@ -13,6 +13,7 @@ const gComputerSelect = document.querySelector('#computer > .item');
 
 gSelection.addEventListener('click', (e) => {
   const select = e.target;
+  if (select.id == 'selection') return;
   playRound(select.id, getComputerChoice());
   gUserSelect.textContent = select.textContent;
 });
