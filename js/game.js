@@ -8,10 +8,13 @@ const gStatus = document.querySelector('#who-wins');
 const gInfo = document.querySelector('#info');
 const gUserWins = document.querySelector('#user > .wins');
 const gComputerWins = document.querySelector('#computer > .wins');
+const gUserSelect = document.querySelector('#user > .item');
+const gComputerSelect = document.querySelector('#computer > .item');
 
 gSelection.addEventListener('click', (e) => {
   const select = e.target;
-  console.log(playRound(select.id, getComputerChoice()));
+  playRound(select.id, getComputerChoice());
+  gUserSelect.textContent = select.textContent;
 });
 
 function getUserChoice() {
@@ -35,9 +38,7 @@ function playRound(playerSelection, computerSelection) {
   } else computerWins++;
 
   let info = `${winner} beats ${looser}`;
-
   if (tie) info = 'cri cri cri...';
-
   refreshInfo(status, info);
 }
 
@@ -50,12 +51,19 @@ function refreshInfo(status, info) {
 
 function getComputerChoice() {
   let numAzar = Math.floor(Math.random() * 3);
+  let computerSelect = '';
   switch (numAzar) {
     case 0:
+      computerSelect = '✊';
+      gComputerSelect.textContent = computerSelect;
       return "rock";
     case 1:
+      computerSelect = '✋';
+      gComputerSelect.textContent = computerSelect;
       return "paper";
     case 2:
+      computerSelect = '✌';
+      gComputerSelect.textContent = computerSelect;
       return "scissors";
   }
 }
