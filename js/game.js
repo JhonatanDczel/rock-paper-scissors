@@ -1,19 +1,18 @@
+//Global Variables
 let userWins = 0;
 let computerWins = 0;
 
-const selection = document.querySelector('#selection');
+//Element selectors
+const gSelection = document.querySelector('#selection');
+const gStatus = document.querySelector('#who-wins');
+const gInfo = document.querySelector('#info');
+const gUserWins = document.querySelector('#user > .wins');
+const gComputerWins = document.querySelector('#computer > .wins');
 
-selection.addEventListener('click', (e) => {
+gSelection.addEventListener('click', (e) => {
   const select = e.target;
   console.log(playRound(select.id, getComputerChoice()));
 });
-
-function game() {
-  let user = getUserChoice();
-  let computer = getComputerChoice();
-  let round = playRound(user, computer);
-  console.log(round);
-}
 
 function getUserChoice() {
   let choice = prompt("Ingresa tu eleccion (Rock / Paper / Scissors)").toLowerCase();
@@ -32,10 +31,21 @@ function playRound(playerSelection, computerSelection) {
     status = "You Win!";
     userWins++;
   } else if (tie) {
-    return "It's a tie :/";
+    status = "It's a tie :/"
   } else computerWins++;
 
-  return `${status} ${winner} beats ${looser}`;
+  let info = `${winner} beats ${looser}`;
+
+  if (tie) info = 'cri cri cri...';
+
+  refreshInfo(status, info);
+}
+
+function refreshInfo(status, info) {
+  gStatus.textContent = status;
+  gInfo.textContent = info;
+  gUserWins.textContent = `Usuario: ${userWins}`;
+  gComputerWins.textContent = `Computadora: ${computerWins}`;
 }
 
 function getComputerChoice() {
