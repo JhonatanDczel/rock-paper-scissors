@@ -23,11 +23,6 @@ function isGameOver() {
   return userWins == 5 || computerWins == 5;
 }
 
-function getUserChoice() {
-  let choice = prompt("Ingresa tu eleccion (Rock / Paper / Scissors)").toLowerCase();
-  return choice;
-}
-
 function playRound(playerSelection, computerSelection) {
   let status = "You Lose!";
   let winner = computerSelection;
@@ -51,8 +46,8 @@ function playRound(playerSelection, computerSelection) {
 function refreshInfo(status, info) {
   gStatus.textContent = status;
   gInfo.textContent = info;
-  gUserWins.textContent = `Usuario: ${userWins}`;
-  gComputerWins.textContent = `Computadora: ${computerWins}`;
+  gUserWins.textContent = `User: ${userWins}`;
+  gComputerWins.textContent = `Computer: ${computerWins}`;
 }
 
 function getComputerChoice() {
