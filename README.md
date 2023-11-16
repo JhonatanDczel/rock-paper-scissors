@@ -4,7 +4,7 @@
 
 ## 🚀 Descripción
 
-Este proyecto es un juego simple de Piedra, Papel o Tijera implementado en HTML, CSS y JavaScript. Es parte de mi aprendizaje en desarrollo web y JavaScript.
+Este proyecto es un juego simple de Piedra, Papel o Tijera implementado en HTML, CSS y JavaScript. Es parte de mi aprendizaje en desarrollo web y JavaScript en el curso Foundations de The Odin Project. ([🔗 Ver mas proyectos](https://github.com/JhonatanDczel/the-odin-project))
 
 ## 🌐 Demo
 
